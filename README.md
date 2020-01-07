@@ -1,1 +1,1 @@
-# Django_Mozila
+# Django_Mozilla
