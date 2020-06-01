@@ -18,4 +18,6 @@
     <li><strong>Mistery Books:</strong> {{ num_mistery }}</li>
     <li><strong>Lovecraft Books:</strong> {{ num_lovecraft }}</li>
   </ul>
+
+  <p>You have visited this page {{ num_visits }}{% if num_visits == 1 %} time{% else %} times{% endif %}.</p>
 {% endblock %}
