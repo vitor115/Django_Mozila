@@ -40,7 +40,7 @@ def index(request):
 
 class BookListView(generic.ListView):
     model = Book
-    paginate_by = 2
+    paginate_by = 10
     #context_object_name = 'my_book_list'   # your own name for the list as a template variable
     #queryset = Book.objects.filter(title__icontains='war')[:5] # Get 5 books containing the title war
     #template_name = 'books/book_detail.html'  # Specify your own template name/location
@@ -58,8 +58,16 @@ class BookListView(generic.ListView):
 
 class BookDetailView(generic.DetailView):
     model = Book
+
+class AuthorListView(generic.ListView):
+    model = Author
+    paginate_by = 10
     
-#Outro Metodo de Implementar com try catch
+class AuthorDetailView(generic.DetailView):
+    model = Author
+    
+    
+# Outro Metodo de Implementar com try catch
 #def book_detail_view(request, primary_key):
 #    try:
 #        book = Book.objects.get(pk=primary_key)
